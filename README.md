@@ -1,6 +1,9 @@
 # api_gateway_lambda
 api_gateway_lambda
 
+<img width="1300" alt="image" src="https://user-images.githubusercontent.com/74225291/164957345-b9b44e03-9572-4921-92a3-d478cc0f5168.png">
+
+
 The AWS services are:
 
 - API Gateway — This service is responsible for deploying and serving HTTP RESTful endpoints. Thus you can trigger actions, when HTTP calls arrives to the generated endpoints.
