@@ -50,8 +50,11 @@ Create a role to access dynamoDB first. we will assign that role to the lambda f
 <img width="1165" alt="image" src="https://user-images.githubusercontent.com/74225291/164957521-393f256f-ffd3-4b5b-815f-63c741be3e2b.png">
 
 
-<img width="1044" alt="image" src="https://user-images.githubusercontent.com/74225291/164957231-04e3d183-4791-4561-8f34-1e9c84230d4b.png">
+<img width="1472" alt="image" src="https://user-images.githubusercontent.com/74225291/164957595-d9caaa6e-17bb-40f6-98fa-bd1bb66f95f9.png">
 
+<img width="1432" alt="image" src="https://user-images.githubusercontent.com/74225291/164957607-a94b6aa5-80a7-4e2d-bcc9-4f2ec58116ff.png">
+
+Lets put below code into lambda function.
 
     import json
     import boto3
