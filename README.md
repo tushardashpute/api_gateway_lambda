@@ -156,4 +156,16 @@ Similarly add Get method to the API gateway and deploy it:
 
 <img width="1318" alt="image" src="https://user-images.githubusercontent.com/74225291/164957978-771fb8ac-6135-4a00-8cf9-4f99c997c7c1.png">
 
-<img width="1519" alt="image" src="https://user-images.githubusercontent.com/74225291/164957160-1ddcf1ec-cf56-4c2e-bf21-909e6c372b77.png">
+Now deploy the Gateway API and test the GET method by directly invoking https URL.
+
+<img width="1515" alt="image" src="https://user-images.githubusercontent.com/74225291/164958029-ce678991-3ad5-478e-9890-a49f12f134d9.png">
+
+<img width="713" alt="image" src="https://user-images.githubusercontent.com/74225291/164958036-4d0c7f4c-dbea-4822-bf37-213b0c694d6e.png">
+
+<img width="1294" alt="image" src="https://user-images.githubusercontent.com/74225291/164958043-2cecb2bb-c6ae-4dd6-9f6e-5d10a0f1a99b.png">
+
+<img width="1520" alt="image" src="https://user-images.githubusercontent.com/74225291/164958050-33269410-3ab3-4a8c-846a-2f3123523ce0.png">
+
+
+So that’s it, now you can fast deploy your APIs using AWS, which turns the production of applications very fast. Imagine a simple mobile aplication that needs some rest endpoints. Withouth the power of lambda, we would have to deploy it on a server or container, which brings a lot of trouble.
+
