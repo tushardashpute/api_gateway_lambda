@@ -131,11 +131,13 @@ There are several tools for testing API, like Postman, but my favorite one is Re
 
 <img width="1185" alt="image" src="https://user-images.githubusercontent.com/74225291/164957820-ba2fbd40-9912-4ac3-b93a-a843c85713ae.png">
 
+After integratig API gateway trigger for insertTemperature it will look like:
+
+<img width="1442" alt="image" src="https://user-images.githubusercontent.com/74225291/164957197-1a20c76c-b20a-42b4-b69f-c67305edfc04.png">
+
 **Creating Lambda Function for GET Request**
 
 create a new lambda function called getTemperatures same like insertTemperatures, and the python will look like:
-
-<img width="1442" alt="image" src="https://user-images.githubusercontent.com/74225291/164957197-1a20c76c-b20a-42b4-b69f-c67305edfc04.png">
 
 
     import json
@@ -150,11 +152,8 @@ create a new lambda function called getTemperatures same like insertTemperatures
         'body': response['Items']
       }
 
+Similarly add Get method to the API gateway and deploy it:
 
+<img width="1318" alt="image" src="https://user-images.githubusercontent.com/74225291/164957978-771fb8ac-6135-4a00-8cf9-4f99c997c7c1.png">
 
 <img width="1519" alt="image" src="https://user-images.githubusercontent.com/74225291/164957160-1ddcf1ec-cf56-4c2e-bf21-909e6c372b77.png">
-
-
-<img width="1407" alt="image" src="https://user-images.githubusercontent.com/74225291/164957216-6196ba9e-e8ae-48a9-ba15-ac2747da7a19.png">
-
-<img width="1461" alt="image" src="https://user-images.githubusercontent.com/74225291/164957259-4bb7b846-8e2d-44aa-ac2c-21174e4ed304.png">
