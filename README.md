@@ -96,9 +96,44 @@ Lets put below code into lambda function.
                     'body': json.dumps('Error saving the temperature')
             }
 
+noow configured test event to test lambda function:
 
-<img width="1519" alt="image" src="https://user-images.githubusercontent.com/74225291/164957160-1ddcf1ec-cf56-4c2e-bf21-909e6c372b77.png">
+{
+  "deviceId": "value1",
+  "temperature": "35"
+}
 
+Test the lambda function:
+
+<img width="1405" alt="image" src="https://user-images.githubusercontent.com/74225291/164957664-8173205b-04c5-4189-826c-699be997d8fe.png">
+
+In the DynamoDb table you can now see the record:
+
+<img width="1193" alt="image" src="https://user-images.githubusercontent.com/74225291/164957717-c78be2bb-07e2-4087-875c-2ee60b67f0cc.png">
+
+**API Gateway Endpoint for POST Request**
+
+So now, let’s go to API Gateway on amazon console, and hit the button to create and endpoint. You will reach a page, and you will need to select the REST(HTTP) protocol, and give a name to the API(temperatureExample), like the example bellow:
+
+![image](https://user-images.githubusercontent.com/74225291/164957729-e4cffa23-8a15-41bf-822a-2ee82e87a307.png)
+
+After that, you will be directed to the API you have created, and now you can create a POST endpoint for this API on the button Actions-> Create Method.
+
+<img width="1074" alt="image" src="https://user-images.githubusercontent.com/74225291/164957760-5fb5da49-de36-4916-bb9e-0fd065f40917.png">
+
+You can test the API you have created in the console, but now we will test it after it’s deployed. So go to Actions -> Deploy API, you can put any deployment stage you want, and you will receive an url. Pick that one and let’s test it in a real HTTP request!
+
+Testing the POST API
+
+There are several tools for testing API, like Postman, but my favorite one is Restlet. It’s a chrome extension where you can test your APIs:
+
+<img width="1203" alt="image" src="https://user-images.githubusercontent.com/74225291/164957812-ef4ed6f1-9bb7-45aa-aee7-a4adbd441e0d.png">
+
+<img width="1185" alt="image" src="https://user-images.githubusercontent.com/74225291/164957820-ba2fbd40-9912-4ac3-b93a-a843c85713ae.png">
+
+**Creating Lambda Function for GET Request**
+
+create a new lambda function called getTemperatures same like insertTemperatures, and the python will look like:
 
 <img width="1442" alt="image" src="https://user-images.githubusercontent.com/74225291/164957197-1a20c76c-b20a-42b4-b69f-c67305edfc04.png">
 
@@ -114,6 +149,10 @@ Lets put below code into lambda function.
         'statusCode': 200,
         'body': response['Items']
       }
+
+
+
+<img width="1519" alt="image" src="https://user-images.githubusercontent.com/74225291/164957160-1ddcf1ec-cf56-4c2e-bf21-909e6c372b77.png">
 
 
 <img width="1407" alt="image" src="https://user-images.githubusercontent.com/74225291/164957216-6196ba9e-e8ae-48a9-ba15-ac2747da7a19.png">
